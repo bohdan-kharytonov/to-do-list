@@ -41,9 +41,6 @@ class Ui_Widget(object):
         self.dateEdit = QtWidgets.QDateEdit(Widget)
         self.dateEdit.setGeometry(QtCore.QRect(170, 100, 110, 24))
         self.dateEdit.setObjectName("dateEdit")
-        self.textBrowser = QtWidgets.QTextBrowser(Widget)
-        self.textBrowser.setGeometry(QtCore.QRect(90, 150, 256, 192))
-        self.textBrowser.setObjectName("textBrowser")
 
         self.retranslateUi(Widget)
         QtCore.QMetaObject.connectSlotsByName(Widget)
