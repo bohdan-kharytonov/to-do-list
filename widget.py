@@ -7,7 +7,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_Widget):
     def __init__(self, *args, obj=None, **kwargs):
         super(MainWindow, self).__init__(*args, **kwargs)
         self.setupUi(self)
-
         self.dataBase = database()
         self.pushButton.clicked.connect(self.save_data)
         self.display_data_from_database()
@@ -24,7 +23,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_Widget):
     def display_data_from_database(self):
         for item in self.dataBase.get_data_from_database():
             item_str = " ".join(str(i).strip("(),") for i in item)
-#            item_str[1:]
             list_item = QtWidgets.QListWidgetItem(item_str[1:])
             self.listWidget.addItem(list_item)
         pass
